@@ -1,4 +1,4 @@
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=200&section=header&text=Muhammet%20%C4%B0kbal%20Y%C4%B1ld%C4%B1z&fontSize=42&fontColor=ffffff&fontAlignY=36&desc=Data%20Mining%20%C2%B7%20Machine%20Learning%20%C2%B7%20Open%20Datasets&descSize=18&descAlignY=58&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9FF,50:0072FF,100:7F00FF&height=220&section=header&text=Muhammet%20%C4%B0kbal%20Y%C4%B1ld%C4%B1z&fontSize=44&fontColor=ffffff&fontAlignY=36&desc=Data%20Mining%20%C2%B7%20Machine%20Learning%20%C2%B7%20Open%20Datasets&descSize=18&descAlignY=58&animation=twinkling" width="100%"/>
 
 <div align="center">
 
@@ -102,4 +102,4 @@ Kısa açıklama.
 Bu depolardaki çalışmaları kullanırsanız lütfen ilgili **Zenodo DOI** ile atıf yapın. Her depoda `CITATION.cff` dosyası bulunur.
 *If you use any of these works, please cite them via their Zenodo DOI.*
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:2c5364,50:203a43,100:0f2027&height=110&section=footer" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7F00FF,50:0072FF,100:00C9FF&height=160&section=footer&reversal=true" width="100%"/>
