@@ -44,6 +44,17 @@ class MuhammetIkbalYildiz:
 </td>
 <td width="50%" valign="top">
 
+#### 🐹 [Go Türkçe İpuçları](https://github.com/mikbalyildiz/go-turkce-ipuclari)
+Go'da en sık yapılan **10 hata** ve doğru kullanımları. Her madde kısa yanlış/doğru örnekli ve satır satır Türkçe açıklamalı.
+
+![License](https://img.shields.io/badge/License-MIT-yellow)
+![Go](https://img.shields.io/badge/Go-00ADD8?logo=go&logoColor=white)
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
 #### 🔜 Sıradaki çalışma · *Coming soon*
 Veri madenciliği ve makine öğrenmesi odaklı yeni bir **Türkçe açık veri seti / araç** hazırlanıyor.
 
