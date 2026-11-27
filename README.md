@@ -34,13 +34,13 @@ class MuhammetIkbalYildiz:
 
 ![Profile views](https://komarev.com/ghpvc/?username=mikbalyildiz&style=for-the-badge&color=2c5364&label=PROFIL+G%C3%96R%C3%9CNT%C3%9CLENME)
 
-<img src="profile/stats.svg" alt="GitHub istatistikleri" />
+<img src="profile/stats.svg" alt="GitHub istatistikleri" width="100%" />
 <br/>
-<img src="profile/top-langs.svg" alt="En çok kullanılan diller" />
+<img src="profile/top-langs.svg" alt="En çok kullanılan diller" width="100%" />
 <br/>
-<img src="profile/streak.svg" alt="Katkı serisi" />
+<img src="profile/streak.svg" alt="Katkı serisi" width="100%" />
 <br/>
-<img src="profile/activity.svg" alt="Katkı grafiği" />
+<img src="profile/activity.svg" alt="Katkı grafiği" width="100%" />
 
 </div>
 
