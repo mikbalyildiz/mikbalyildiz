@@ -101,19 +101,19 @@ def dil_karti(v):
     cubuk, x, bar = "", 24.0, W - 48
     for _, (boyut, renk) in diller:
         w = bar * boyut / toplam
-        cubuk += f'<rect x="{x:.1f}" y="58" width="{w:.1f}" height="12" fill="{renk}"/>'
+        cubuk += f'<rect x="{x:.1f}" y="48" width="{w:.1f}" height="10" fill="{renk}"/>'
         x += w
     etiket, sutun = "", 4
     for i, (ad, (boyut, renk)) in enumerate(diller):
-        ex, ey = 24 + (i % sutun) * (bar / sutun), 104 + (i // sutun) * 28
+        ex, ey = 24 + (i % sutun) * (bar / sutun), 86 + (i // sutun) * 26
         etiket += (f'<circle cx="{ex + 6:.1f}" cy="{ey - 5}" r="6" fill="{renk}"/>'
                    f'<text x="{ex + 18:.1f}" y="{ey}" class="m">{escape(ad)} <tspan class="y">{100 * boyut / toplam:.1f}%</tspan></text>')
-    h = 116 + ((len(diller) + sutun - 1) // sutun) * 28
+    h = 76 + ((len(diller) + sutun - 1) // sutun) * 26
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{h}" viewBox="0 0 {W} {h}">
-<style>.t{{font:600 20px 'Segoe UI',Ubuntu,sans-serif;fill:{BASLIK}}}.m{{font:600 15px 'Segoe UI',Ubuntu,sans-serif;fill:{METIN}}}.y{{font-weight:400;fill:#9fb3bd}}</style>
+<style>.t{{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:{BASLIK}}}.m{{font:600 15px 'Segoe UI',Ubuntu,sans-serif;fill:{METIN}}}.y{{font-weight:400;fill:#9fb3bd}}</style>
 <rect width="{W}" height="{h}" rx="8" fill="{BG}"/>
-<text x="24" y="38" class="t">En Çok Kullanılan Diller · Languages</text>
-<clipPath id="c"><rect x="24" y="58" width="{bar}" height="12" rx="6"/></clipPath>
+<text x="24" y="34" class="t">En Çok Kullanılan Diller · Languages</text>
+<clipPath id="c"><rect x="24" y="48" width="{bar}" height="10" rx="5"/></clipPath>
 <g clip-path="url(#c)">{cubuk}</g>
 {etiket}
 </svg>"""
@@ -138,23 +138,23 @@ def seriler(gunler):
 
 
 def kutulu_kart(baslik, kutular):
-    W, bosluk = GENISLIK, 16
+    """Başlık + yan yana kompakt kutucuklar (ikon, büyük sayı, İngilizce/Türkçe etiket)."""
+    W, bosluk = GENISLIK, 14
     kw = (W - 48 - bosluk * (len(kutular) - 1)) / len(kutular)
     govde = ""
     for i, (ikon, deger, en, tr) in enumerate(kutular):
         x = 24 + i * (kw + bosluk)
-        orta = x + kw / 2
         govde += f"""<g class="k" style="animation-delay:{i * 150}ms">
-<rect x="{x:.1f}" y="60" width="{kw:.1f}" height="140" rx="12" fill="{KUTU}" stroke="{VURGU}" stroke-opacity="0.35"/>
-<text x="{orta:.1f}" y="92" text-anchor="middle" font-size="24">{ikon}</text>
-<text x="{orta:.1f}" y="142" text-anchor="middle" class="d">{deger}</text>
-<text x="{orta:.1f}" y="168" text-anchor="middle" class="m">{escape(en)}</text>
-<text x="{orta:.1f}" y="187" text-anchor="middle" class="s">{escape(tr)}</text>
+<rect x="{x:.1f}" y="50" width="{kw:.1f}" height="64" rx="10" fill="{KUTU}" stroke="{VURGU}" stroke-opacity="0.35"/>
+<text x="{x + 18:.1f}" y="91" font-size="20">{ikon}</text>
+<text x="{x + 52:.1f}" y="96" class="d">{deger}</text>
+<text x="{x + kw - 16:.1f}" y="78" text-anchor="end" class="m">{escape(en)}</text>
+<text x="{x + kw - 16:.1f}" y="97" text-anchor="end" class="s">{escape(tr)}</text>
 </g>"""
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="224" viewBox="0 0 {W} 224">
-<style>.t{{font:600 20px 'Segoe UI',Ubuntu,sans-serif;fill:{BASLIK}}}.d{{font:800 42px 'Segoe UI',Ubuntu,sans-serif;fill:{VURGU}}}.m{{font:600 15px 'Segoe UI',Ubuntu,sans-serif;fill:{METIN}}}.s{{font:400 12.5px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}}.k{{opacity:0;animation:g .6s ease-out forwards}}@keyframes g{{from{{opacity:0;transform:translateY(8px)}}to{{opacity:1;transform:translateY(0)}}}}</style>
-<rect width="{W}" height="224" rx="8" fill="{BG}"/>
-<text x="24" y="38" class="t">{escape(baslik)}</text>
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="130" viewBox="0 0 {W} 130">
+<style>.t{{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:{BASLIK}}}.d{{font:800 30px 'Segoe UI',Ubuntu,sans-serif;fill:{VURGU}}}.m{{font:600 14px 'Segoe UI',Ubuntu,sans-serif;fill:{METIN}}}.s{{font:400 11.5px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}}.k{{opacity:0;animation:g .6s ease-out forwards}}@keyframes g{{from{{opacity:0;transform:translateY(6px)}}to{{opacity:1;transform:translateY(0)}}}}</style>
+<rect width="{W}" height="130" rx="8" fill="{BG}"/>
+<text x="24" y="34" class="t">{escape(baslik)}</text>
 {govde}
 </svg>"""
 
@@ -184,7 +184,7 @@ def katki_grafigi(v):
         haftalar = [(gunler[i]["date"], sum(g["contributionCount"] for g in gunler[i:i + 7]))
                     for i in range(0, len(gunler), 7)]
         gunluk = False
-    G, Y, sol, sag, ust, alt = GENISLIK, 240, 44, 24, 60, 36
+    G, Y, sol, sag, ust, alt = GENISLIK, 180, 44, 24, 50, 32
     en_cok = max((t for _, t in haftalar), default=0) or 1
     adim = (G - sol - sag) / max(len(haftalar) - 1, 1)
     nokta = [(sol + i * adim, Y - alt - (Y - ust - alt) * t / en_cok) for i, (_, t) in enumerate(haftalar)]
@@ -205,13 +205,13 @@ def katki_grafigi(v):
                     etiket += f'<text x="{sol + i * adim:.1f}" y="{Y - 14}" class="e" text-anchor="middle">{AYLAR[ay - 1]}</text>'
                 onceki_ay = ay
     return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{G}" height="{Y}" viewBox="0 0 {G} {Y}">
-<style>.t{{font:600 20px 'Segoe UI',Ubuntu,sans-serif;fill:{BASLIK}}}.e{{font:400 12px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}}
+<style>.t{{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:{BASLIK}}}.e{{font:400 12px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}}
 .c{{stroke-dasharray:1;stroke-dashoffset:1;animation:ciz 2.2s ease-out forwards}}
 .a{{opacity:0;animation:belir 1s ease-out 1.4s forwards}}
 @keyframes ciz{{to{{stroke-dashoffset:0}}}}@keyframes belir{{to{{opacity:1}}}}</style>
 <defs><linearGradient id="dg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{VURGU}" stop-opacity="0.45"/><stop offset="1" stop-color="{VURGU}" stop-opacity="0"/></linearGradient></defs>
 <rect width="{G}" height="{Y}" rx="8" fill="{BG}"/>
-<text x="24" y="38" class="t">Katkı Grafiği · Contributions</text>
+<text x="24" y="34" class="t">Katkı Grafiği · Contributions</text>
 <line x1="{sol}" y1="{Y - alt}" x2="{G - sag}" y2="{Y - alt}" stroke="#2a4652"/>
 <text x="{sol - 6}" y="{ust + 4}" class="e" text-anchor="end">{en_cok}</text>
 <text x="{sol - 6}" y="{Y - alt + 4}" class="e" text-anchor="end">0</text>
