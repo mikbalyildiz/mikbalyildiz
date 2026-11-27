@@ -41,6 +41,8 @@ class MuhammetIkbalYildiz:
 <img src="profile/streak.svg" alt="Katkı serisi" width="100%" />
 <br/>
 <img src="profile/activity.svg" alt="Katkı grafiği" width="100%" />
+<br/>
+<img src="profile/views.svg" alt="Profil görüntülenme" width="100%" />
 
 </div>
 

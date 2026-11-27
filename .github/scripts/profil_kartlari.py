@@ -5,6 +5,7 @@ ortadan kaldırmak için kartlar her gün bu repoda yeniden oluşturulur.
 """
 import datetime
 import json
+import re
 import os
 import urllib.request
 from html import escape
@@ -221,6 +222,77 @@ def katki_grafigi(v):
 </svg>"""
 
 
+def goruntulenme_kaydet():
+    """Profil sayacının (komarev) toplamını okur, günlük geçmişe yazar.
+
+    Sayaç yalnızca toplam verdiği için günlük ziyaret, ardışık günlerin farkından çıkar.
+    Not: bu okuma da sayacı 1 artırır.
+    """
+    yol = os.path.join(CIKTI, "views.json")
+    try:
+        with open(yol, encoding="utf-8") as f:
+            gecmis = json.load(f)
+    except FileNotFoundError:
+        gecmis = {}
+    istek = urllib.request.Request(
+        f"https://komarev.com/ghpvc/?username={KULLANICI}&style=flat",
+        headers={"User-Agent": "profil-kartlari"},
+    )
+    with urllib.request.urlopen(istek, timeout=30) as yanit:
+        svg = yanit.read().decode("utf-8", "replace")
+    sayilar = re.findall(r">\s*([\d.,]+)\s*<", svg)
+    if not sayilar:
+        raise ValueError("Sayaçta sayı bulunamadı")
+    toplam = int(re.sub(r"[.,]", "", sayilar[-1]))
+    gecmis[datetime.date.today().isoformat()] = toplam
+    with open(yol, "w", encoding="utf-8") as f:
+        json.dump(dict(sorted(gecmis.items())), f, indent=1)
+    return gecmis
+
+
+def goruntulenme_grafigi(gecmis):
+    """Son 30 günün günlük profil görüntülenmesini ince bir grafikle gösterir."""
+    tarihler = sorted(gecmis)
+    gunluk = [(t, max(0, gecmis[t] - gecmis[o])) for o, t in zip(tarihler, tarihler[1:])][-30:]
+    toplam = gecmis[tarihler[-1]] if tarihler else 0
+    bugun = gunluk[-1][1] if gunluk else 0
+    hafta = sum(d for _, d in gunluk[-7:])
+    G, Y, sol, sag, ust, alt = GENISLIK, 150, 44, 24, 50, 30
+    ozet = (f'<text x="{G - 24}" y="34" text-anchor="end" class="o">Son 24 saat <tspan class="v">+{bugun}</tspan>'
+            f' · Bu hafta <tspan class="v">+{hafta}</tspan> · Toplam <tspan class="v">{toplam}</tspan></text>')
+    if len(gunluk) < 2:
+        icerik = (f'<text x="{G / 2}" y="{(ust + Y - alt) / 2 + 6}" text-anchor="middle" class="o">'
+                  f'Günlük veri toplanıyor · grafik birkaç gün içinde dolacak</text>')
+    else:
+        en_cok = max(d for _, d in gunluk) or 1
+        adim = (G - sol - sag) / (len(gunluk) - 1)
+        nokta = [(sol + i * adim, Y - alt - (Y - ust - alt) * d / en_cok) for i, (_, d) in enumerate(gunluk)]
+        cizgi = " ".join(f"{x:.1f},{y:.1f}" for x, y in nokta)
+        alan = f"{sol},{Y - alt} {cizgi} {nokta[-1][0]:.1f},{Y - alt}"
+        aralik = max(1, len(gunluk) // 7)
+        etiket = "".join(
+            f'<text x="{sol + i * adim:.1f}" y="{Y - 10}" class="e" text-anchor="middle">{int(t[8:10])} {AYLAR[int(t[5:7]) - 1]}</text>'
+            for i, (t, _) in enumerate(gunluk) if i % aralik == 0 and sol + i * adim < G - sag - 30)
+        icerik = f"""<line x1="{sol}" y1="{Y - alt}" x2="{G - sag}" y2="{Y - alt}" stroke="#2a4652"/>
+<text x="{sol - 6}" y="{ust + 4}" class="e" text-anchor="end">{en_cok}</text>
+<text x="{sol - 6}" y="{Y - alt + 4}" class="e" text-anchor="end">0</text>
+<polygon class="a" points="{alan}" fill="url(#vg)"/>
+<polyline class="c" pathLength="1" points="{cizgi}" fill="none" stroke="{VURGU}" stroke-width="2.2" stroke-linejoin="round"/>
+{etiket}"""
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="{G}" height="{Y}" viewBox="0 0 {G} {Y}">
+<style>.t{{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:{BASLIK}}}.e{{font:400 12px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}}
+.o{{font:400 13px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}}.v{{font-weight:700;fill:{METIN}}}
+.c{{stroke-dasharray:1;stroke-dashoffset:1;animation:ciz 2.2s ease-out forwards}}
+.a{{opacity:0;animation:belir 1s ease-out 1.4s forwards}}
+@keyframes ciz{{to{{stroke-dashoffset:0}}}}@keyframes belir{{to{{opacity:1}}}}</style>
+<defs><linearGradient id="vg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="{VURGU}" stop-opacity="0.45"/><stop offset="1" stop-color="{VURGU}" stop-opacity="0"/></linearGradient></defs>
+<rect width="{G}" height="{Y}" rx="8" fill="{BG}"/>
+<text x="24" y="34" class="t">Profil Görüntülenme · Views</text>
+{ozet}
+{icerik}
+</svg>"""
+
+
 def main():
     v = verileri_topla()
     os.makedirs(CIKTI, exist_ok=True)
@@ -228,6 +300,12 @@ def main():
                     ("streak.svg", seri_karti(v)), ("activity.svg", katki_grafigi(v))]:
         with open(os.path.join(CIKTI, ad), "w", encoding="utf-8") as f:
             f.write(svg)
+    try:
+        gecmis = goruntulenme_kaydet()
+        with open(os.path.join(CIKTI, "views.svg"), "w", encoding="utf-8") as f:
+            f.write(goruntulenme_grafigi(gecmis))
+    except Exception as hata:  # sayaç erişilemezse diğer kartlar yine güncellensin
+        print(f"Görüntülenme okunamadı: {hata}")
     print(f"Toplam yıldız: {v['yildiz']} · commit: {v['commit']}")
 
 
