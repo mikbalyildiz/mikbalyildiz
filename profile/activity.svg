@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="220" viewBox="0 0 420 220">
+<style>.t{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.e{font:400 10px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}
+.c{stroke-dasharray:3000;stroke-dashoffset:3000;animation:ciz 2.2s ease-out forwards}
+.a{opacity:0;animation:belir 1s ease-out 1.4s forwards}
+@keyframes ciz{to{stroke-dashoffset:0}}@keyframes belir{to{opacity:1}}</style>
+<defs><linearGradient id="dg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2C9AB7" stop-opacity="0.45"/><stop offset="1" stop-color="#2C9AB7" stop-opacity="0"/></linearGradient></defs>
+<rect width="420" height="220" rx="6" fill="#0f2027"/>
+<text x="20" y="36" class="t">Katkı Grafiği · Contributions</text>
+<line x1="34" y1="186" x2="406" y2="186" stroke="#2a4652"/>
+<text x="28" y="60" class="e" text-anchor="end">39</text>
+<text x="28" y="190" class="e" text-anchor="end">0</text>
+<polygon class="a" points="34,186 34.0,186.0 41.2,186.0 48.3,186.0 55.5,186.0 62.6,186.0 69.8,186.0 76.9,186.0 84.1,186.0 91.2,186.0 98.4,186.0 105.5,186.0 112.7,186.0 119.8,186.0 127.0,186.0 134.2,186.0 141.3,186.0 148.5,186.0 155.6,186.0 162.8,186.0 169.9,186.0 177.1,186.0 184.2,186.0 191.4,186.0 198.5,186.0 205.7,186.0 212.8,186.0 220.0,186.0 227.2,186.0 234.3,186.0 241.5,186.0 248.6,186.0 255.8,186.0 262.9,186.0 270.1,186.0 277.2,186.0 284.4,186.0 291.5,186.0 298.7,186.0 305.8,186.0 313.0,186.0 320.2,186.0 327.3,186.0 334.5,186.0 341.6,186.0 348.8,186.0 355.9,186.0 363.1,186.0 370.2,186.0 377.4,186.0 384.5,186.0 391.7,186.0 398.8,182.7 406.0,56.0 406.0,186" fill="url(#dg)"/>
+<polyline class="c" points="34.0,186.0 41.2,186.0 48.3,186.0 55.5,186.0 62.6,186.0 69.8,186.0 76.9,186.0 84.1,186.0 91.2,186.0 98.4,186.0 105.5,186.0 112.7,186.0 119.8,186.0 127.0,186.0 134.2,186.0 141.3,186.0 148.5,186.0 155.6,186.0 162.8,186.0 169.9,186.0 177.1,186.0 184.2,186.0 191.4,186.0 198.5,186.0 205.7,186.0 212.8,186.0 220.0,186.0 227.2,186.0 234.3,186.0 241.5,186.0 248.6,186.0 255.8,186.0 262.9,186.0 270.1,186.0 277.2,186.0 284.4,186.0 291.5,186.0 298.7,186.0 305.8,186.0 313.0,186.0 320.2,186.0 327.3,186.0 334.5,186.0 341.6,186.0 348.8,186.0 355.9,186.0 363.1,186.0 370.2,186.0 377.4,186.0 384.5,186.0 391.7,186.0 398.8,182.7 406.0,56.0" fill="none" stroke="#2C9AB7" stroke-width="2.2" stroke-linejoin="round"/>
+<text x="48.3" y="206" class="e" text-anchor="middle">Ara</text><text x="76.9" y="206" class="e" text-anchor="middle">Oca</text><text x="105.5" y="206" class="e" text-anchor="middle">Şub</text><text x="134.2" y="206" class="e" text-anchor="middle">Mar</text><text x="169.9" y="206" class="e" text-anchor="middle">Nis</text><text x="198.5" y="206" class="e" text-anchor="middle">May</text><text x="234.3" y="206" class="e" text-anchor="middle">Haz</text><text x="262.9" y="206" class="e" text-anchor="middle">Tem</text><text x="291.5" y="206" class="e" text-anchor="middle">Ağu</text><text x="327.3" y="206" class="e" text-anchor="middle">Eyl</text><text x="355.9" y="206" class="e" text-anchor="middle">Eki</text><text x="384.5" y="206" class="e" text-anchor="middle">Kas</text>
+</svg>

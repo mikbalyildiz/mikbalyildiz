@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="200" viewBox="0 0 420 200">
+<style>.t{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.d{font:800 34px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.m{font:600 13px 'Segoe UI',Ubuntu,sans-serif;fill:#ffffff}.s{font:400 10.5px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}.k{opacity:0;animation:g .6s ease-out forwards}@keyframes g{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}</style>
+<rect width="420" height="200" rx="6" fill="#0f2027"/>
+<text x="20" y="36" class="t">Katkı Serisi · Streak</text>
+<g class="k" style="animation-delay:0ms">
+<rect x="20" y="56" width="120" height="124" rx="10" fill="#16313b" stroke="#2C9AB7" stroke-opacity="0.35"/>
+<text x="80" y="84" text-anchor="middle" font-size="20">🔥</text>
+<text x="80" y="126" text-anchor="middle" class="d">7</text>
+<text x="80" y="150" text-anchor="middle" class="m">Current</text>
+<text x="80" y="167" text-anchor="middle" class="s">(Güncel Seri · gün)</text>
+</g><g class="k" style="animation-delay:150ms">
+<rect x="150" y="56" width="120" height="124" rx="10" fill="#16313b" stroke="#2C9AB7" stroke-opacity="0.35"/>
+<text x="210" y="84" text-anchor="middle" font-size="20">🏆</text>
+<text x="210" y="126" text-anchor="middle" class="d">7</text>
+<text x="210" y="150" text-anchor="middle" class="m">Longest</text>
+<text x="210" y="167" text-anchor="middle" class="s">(En Uzun Seri · gün)</text>
+</g><g class="k" style="animation-delay:300ms">
+<rect x="280" y="56" width="120" height="124" rx="10" fill="#16313b" stroke="#2C9AB7" stroke-opacity="0.35"/>
+<text x="340" y="84" text-anchor="middle" font-size="20">📅</text>
+<text x="340" y="126" text-anchor="middle" class="d">40</text>
+<text x="340" y="150" text-anchor="middle" class="m">Contributions</text>
+<text x="340" y="167" text-anchor="middle" class="s">(Son 1 Yıl Katkı)</text>
+</g>
+</svg>
