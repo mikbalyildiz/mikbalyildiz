@@ -9,7 +9,6 @@
 [![Website](https://img.shields.io/badge/ikbalyildiz.com-Web-0f2027?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ikbalyildiz.com)
 [![Email](https://img.shields.io/badge/E--posta-mikbalyildiz%40bayburt.edu.tr-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mikbalyildiz@bayburt.edu.tr)
 [![Toplam yıldız](https://img.shields.io/github/stars/mikbalyildiz?affiliations=OWNER&style=for-the-badge&logo=github&color=2C9AB7&label=TOPLAM+YILDIZ)](https://github.com/mikbalyildiz?tab=repositories&sort=stargazers)
-![Profile views](https://komarev.com/ghpvc/?username=mikbalyildiz&style=for-the-badge&color=2c5364&label=PROFIL+G%C3%96R%C3%9CNT%C3%9CLENME)
 
 </div>
 
@@ -33,9 +32,15 @@ class MuhammetIkbalYildiz:
 
 <div align="center">
 
+![Profile views](https://komarev.com/ghpvc/?username=mikbalyildiz&style=for-the-badge&color=2c5364&label=PROFIL+G%C3%96R%C3%9CNT%C3%9CLENME)
+
 <img src="profile/stats.svg" alt="GitHub istatistikleri" />
 <br/>
 <img src="profile/top-langs.svg" alt="En çok kullanılan diller" />
+<br/>
+<img src="profile/streak.svg" alt="Katkı serisi" />
+<br/>
+<img src="profile/activity.svg" alt="Katkı grafiği" />
 
 </div>
 
