@@ -29,6 +29,18 @@ class MuhammetIkbalYildiz:
 
 ---
 
+### 📈 GitHub Aktivitesi · *Activity*
+
+<div align="center">
+
+<img src="profile/stats.svg" alt="GitHub istatistikleri" />
+<br/>
+<img src="profile/top-langs.svg" alt="En çok kullanılan diller" />
+
+</div>
+
+---
+
 ### 📂 Açık Kaynak Çalışmalar · *Open-Source Research & Datasets*
 
 <table>
@@ -91,18 +103,6 @@ Kısa açıklama.
 <div align="center">
 
 <img src="https://skillicons.dev/icons?i=python,sklearn,pytorch,tensorflow,r,go,cs,php,mysql,postgres,git,linux,vscode&perline=13" />
-
-</div>
-
----
-
-### 📈 GitHub Aktivitesi · *Activity*
-
-<div align="center">
-
-<img src="profile/stats.svg" alt="GitHub istatistikleri" />
-
-<img src="profile/top-langs.svg" alt="En çok kullanılan diller" />
 
 </div>
 
