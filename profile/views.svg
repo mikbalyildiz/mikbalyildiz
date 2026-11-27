@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="150" viewBox="0 0 860 150">
+<style>.t{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.e{font:400 12px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}
+.o{font:400 13px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}.v{font-weight:700;fill:#ffffff}
+.c{stroke-dasharray:1;stroke-dashoffset:1;animation:ciz 2.2s ease-out forwards}
+.a{opacity:0;animation:belir 1s ease-out 1.4s forwards}
+@keyframes ciz{to{stroke-dashoffset:0}}@keyframes belir{to{opacity:1}}</style>
+<defs><linearGradient id="vg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2C9AB7" stop-opacity="0.45"/><stop offset="1" stop-color="#2C9AB7" stop-opacity="0"/></linearGradient></defs>
+<rect width="860" height="150" rx="8" fill="#0f2027"/>
+<text x="24" y="34" class="t">Profil Görüntülenme · Views</text>
+<text x="836" y="34" text-anchor="end" class="o">Son 24 saat <tspan class="v">+0</tspan> · Bu hafta <tspan class="v">+0</tspan> · Toplam <tspan class="v">513</tspan></text>
+<text x="430.0" y="91.0" text-anchor="middle" class="o">Günlük veri toplanıyor · grafik birkaç gün içinde dolacak</text>
+</svg>
