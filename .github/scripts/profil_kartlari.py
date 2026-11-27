@@ -194,7 +194,7 @@ def katki_grafigi(v):
     if gunluk:
         aralik = max(1, len(haftalar) // 7)
         for i, (tarih, _) in enumerate(haftalar):
-            if i % aralik == 0:
+            if i % aralik == 0 and sol + i * adim < G - sag - 30:
                 etiket += f'<text x="{sol + i * adim:.1f}" y="{Y - 14}" class="e" text-anchor="middle">{int(tarih[8:10])} {AYLAR[int(tarih[5:7]) - 1]}</text>'
     else:
         onceki_ay = None
