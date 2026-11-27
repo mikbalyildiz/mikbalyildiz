@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="124" viewBox="0 0 420 124">
+<style>.t{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.m{font:400 12px 'Segoe UI',Ubuntu,sans-serif;fill:#ffffff}</style>
+<rect width="420" height="124" rx="6" fill="#0f2027"/>
+<text x="25" y="35" class="t">En Çok Kullanılan Diller</text>
+<clipPath id="c"><rect x="25" y="55" width="370" height="8" rx="4"/></clipPath>
+<g clip-path="url(#c)"><rect x="25.0" y="55" width="258.8" height="8" fill="#00ADD8"/><rect x="283.8" y="55" width="111.2" height="8" fill="#e38c00"/></g>
+<circle cx="30" cy="86" r="5" fill="#00ADD8"/><text x="40" y="90" class="m">Go 69.9%</text><circle cx="220" cy="86" r="5" fill="#e38c00"/><text x="230" y="90" class="m">TSQL 30.1%</text>
+</svg>
