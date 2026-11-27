@@ -8,6 +8,7 @@
 [![Google Scholar](https://img.shields.io/badge/Google_Scholar-Profil-4285F4?style=for-the-badge&logo=googlescholar&logoColor=white)](https://scholar.google.com/citations?user=2Jm_nT4AAAAJ)
 [![Website](https://img.shields.io/badge/ikbalyildiz.com-Web-0f2027?style=for-the-badge&logo=googlechrome&logoColor=white)](https://ikbalyildiz.com)
 [![Email](https://img.shields.io/badge/E--posta-mikbalyildiz%40bayburt.edu.tr-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:mikbalyildiz@bayburt.edu.tr)
+[![Toplam yıldız](https://img.shields.io/github/stars/mikbalyildiz?affiliations=OWNER&style=for-the-badge&logo=github&color=2C9AB7&label=TOPLAM+YILDIZ)](https://github.com/mikbalyildiz?tab=repositories&sort=stargazers)
 ![Profile views](https://komarev.com/ghpvc/?username=mikbalyildiz&style=for-the-badge&color=2c5364&label=PROFIL+G%C3%96R%C3%9CNT%C3%9CLENME)
 
 </div>
@@ -99,10 +100,9 @@ Kısa açıklama.
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=mikbalyildiz&show_icons=true&hide_border=true&bg_color=0f2027&title_color=2C9AB7&icon_color=2C9AB7&text_color=ffffff&count_private=true" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mikbalyildiz&layout=compact&hide_border=true&bg_color=0f2027&title_color=2C9AB7&text_color=ffffff" />
+<img src="profile/stats.svg" alt="GitHub istatistikleri" />
 
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=mikbalyildiz&bg_color=0f2027&color=ffffff&line=2C9AB7&point=ffffff&area=true&area_color=2C9AB7&hide_border=true&custom_title=Katk%C4%B1%20Grafi%C4%9Fi%20%C2%B7%20Contribution%20Graph" width="100%" />
+<img src="profile/top-langs.svg" alt="En çok kullanılan diller" />
 
 </div>
 

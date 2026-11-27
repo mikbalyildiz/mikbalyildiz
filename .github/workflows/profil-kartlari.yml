@@ -1,0 +1,33 @@
+name: Profil kartlarını güncelle
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # her gün 06:00 (TR)
+  workflow_dispatch:       # Actions sekmesinden elle çalıştırma
+  push:
+    branches: [main]
+    paths: [".github/scripts/profil_kartlari.py", ".github/workflows/profil-kartlari.yml"]
+
+permissions:
+  contents: write
+
+jobs:
+  kartlar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Kartları üret
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KULLANICI: mikbalyildiz
+        run: python .github/scripts/profil_kartlari.py
+      - name: Değiştiyse kaydet
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898469+github-actions[bot]@users.noreply.github.com"
+          git add profile/*.svg
+          git diff --cached --quiet || git commit -m "Profil kartlarını güncelle"
+          git push
