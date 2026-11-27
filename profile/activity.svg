@@ -7,9 +7,9 @@
 <rect width="860" height="240" rx="8" fill="#0f2027"/>
 <text x="24" y="38" class="t">Katkı Grafiği · Contributions</text>
 <line x1="44" y1="204" x2="836" y2="204" stroke="#2a4652"/>
-<text x="38" y="64" class="e" text-anchor="end">17</text>
+<text x="38" y="64" class="e" text-anchor="end">18</text>
 <text x="38" y="208" class="e" text-anchor="end">0</text>
-<polygon class="a" points="44,204 44.0,204.0 100.6,204.0 157.1,204.0 213.7,204.0 270.3,204.0 326.9,204.0 383.4,204.0 440.0,204.0 496.6,195.5 553.1,102.4 609.7,153.2 666.3,187.1 722.9,187.1 779.4,195.5 836.0,60.0 836.0,204" fill="url(#dg)"/>
-<polyline class="c" pathLength="1" points="44.0,204.0 100.6,204.0 157.1,204.0 213.7,204.0 270.3,204.0 326.9,204.0 383.4,204.0 440.0,204.0 496.6,195.5 553.1,102.4 609.7,153.2 666.3,187.1 722.9,187.1 779.4,195.5 836.0,60.0" fill="none" stroke="#2C9AB7" stroke-width="2.2" stroke-linejoin="round"/>
-<text x="44.0" y="226" class="e" text-anchor="middle">13 Kas</text><text x="157.1" y="226" class="e" text-anchor="middle">15 Kas</text><text x="270.3" y="226" class="e" text-anchor="middle">17 Kas</text><text x="383.4" y="226" class="e" text-anchor="middle">19 Kas</text><text x="496.6" y="226" class="e" text-anchor="middle">21 Kas</text><text x="609.7" y="226" class="e" text-anchor="middle">23 Kas</text><text x="722.9" y="226" class="e" text-anchor="middle">25 Kas</text><text x="836.0" y="226" class="e" text-anchor="middle">27 Kas</text>
+<polygon class="a" points="44,204 44.0,204.0 100.6,204.0 157.1,204.0 213.7,204.0 270.3,204.0 326.9,204.0 383.4,204.0 440.0,204.0 496.6,196.0 553.1,108.0 609.7,156.0 666.3,188.0 722.9,188.0 779.4,196.0 836.0,60.0 836.0,204" fill="url(#dg)"/>
+<polyline class="c" pathLength="1" points="44.0,204.0 100.6,204.0 157.1,204.0 213.7,204.0 270.3,204.0 326.9,204.0 383.4,204.0 440.0,204.0 496.6,196.0 553.1,108.0 609.7,156.0 666.3,188.0 722.9,188.0 779.4,196.0 836.0,60.0" fill="none" stroke="#2C9AB7" stroke-width="2.2" stroke-linejoin="round"/>
+<text x="44.0" y="226" class="e" text-anchor="middle">13 Kas</text><text x="157.1" y="226" class="e" text-anchor="middle">15 Kas</text><text x="270.3" y="226" class="e" text-anchor="middle">17 Kas</text><text x="383.4" y="226" class="e" text-anchor="middle">19 Kas</text><text x="496.6" y="226" class="e" text-anchor="middle">21 Kas</text><text x="609.7" y="226" class="e" text-anchor="middle">23 Kas</text><text x="722.9" y="226" class="e" text-anchor="middle">25 Kas</text>
 </svg>
