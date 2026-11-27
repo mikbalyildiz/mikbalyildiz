@@ -12,7 +12,7 @@ KULLANICI = os.environ.get("KULLANICI", "mikbalyildiz")
 TOKEN = os.environ["GITHUB_TOKEN"]
 CIKTI = "profile"
 
-BG, BASLIK, METIN, VURGU = "#0f2027", "#2C9AB7", "#ffffff", "#2C9AB7"
+BG, BASLIK, METIN, VURGU, KUTU = "#0f2027", "#2C9AB7", "#ffffff", "#2C9AB7", "#16313b"
 
 SORGU = """
 query($login: String!, $cursor: String) {
@@ -77,22 +77,27 @@ def verileri_topla():
 
 
 def istatistik_karti(v):
-    satirlar = [
-        ("Toplam Yıldız · Stars", v["yildiz"]),
-        ("Commit (son 1 yıl)", v["commit"]),
-        ("Issue", v["issue"]),
+    kutular = [
+        ("⭐", v["yildiz"], "Stars", "(Toplam Yıldız)"),
+        ("📝", v["commit"], "Commits", "(Kod Kaydı · son 1 yıl)"),
+        ("🐞", v["issue"], "Issues", "(Sorun Bildirimi)"),
     ]
-    govde = "".join(
-        f'<text x="25" y="{80 + i * 26}" class="m">{escape(ad)}:</text>'
-        f'<text x="300" y="{80 + i * 26}" class="d" text-anchor="end">{deger}</text>'
-        for i, (ad, deger) in enumerate(satirlar)
-    )
-    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="420" height="165" viewBox="0 0 420 165">
-<style>.t{{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:{BASLIK}}}.m{{font:600 14px 'Segoe UI',Ubuntu,sans-serif;fill:{METIN}}}.d{{font:700 15px 'Segoe UI',Ubuntu,sans-serif;fill:{VURGU}}}</style>
-<rect width="420" height="165" rx="6" fill="{BG}"/>
-<text x="25" y="38" class="t">GitHub İstatistikleri · Stats</text>
+    govde = ""
+    for i, (ikon, deger, en, tr) in enumerate(kutular):
+        x = 20 + i * 130
+        orta = x + 60
+        govde += f"""<g class="k" style="animation-delay:{i * 150}ms">
+<rect x="{x}" y="56" width="120" height="124" rx="10" fill="{KUTU}" stroke="{VURGU}" stroke-opacity="0.35"/>
+<text x="{orta}" y="84" text-anchor="middle" font-size="20">{ikon}</text>
+<text x="{orta}" y="126" text-anchor="middle" class="d">{deger}</text>
+<text x="{orta}" y="150" text-anchor="middle" class="m">{escape(en)}</text>
+<text x="{orta}" y="167" text-anchor="middle" class="s">{escape(tr)}</text>
+</g>"""
+    return f"""<svg xmlns="http://www.w3.org/2000/svg" width="420" height="200" viewBox="0 0 420 200">
+<style>.t{{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:{BASLIK}}}.d{{font:800 34px 'Segoe UI',Ubuntu,sans-serif;fill:{VURGU}}}.m{{font:600 13px 'Segoe UI',Ubuntu,sans-serif;fill:{METIN}}}.s{{font:400 10.5px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}}.k{{opacity:0;animation:g .6s ease-out forwards}}@keyframes g{{from{{opacity:0;transform:translateY(8px)}}to{{opacity:1;transform:translateY(0)}}}}</style>
+<rect width="420" height="200" rx="6" fill="{BG}"/>
+<text x="20" y="36" class="t">GitHub İstatistikleri · Stats</text>
 {govde}
-<text x="365" y="112" text-anchor="middle" font-size="40">⭐</text>
 </svg>"""
 
 
