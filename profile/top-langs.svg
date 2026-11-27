@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="144" viewBox="0 0 860 144">
-<style>.t{font:600 20px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.m{font:600 15px 'Segoe UI',Ubuntu,sans-serif;fill:#ffffff}.y{font-weight:400;fill:#9fb3bd}</style>
-<rect width="860" height="144" rx="8" fill="#0f2027"/>
-<text x="24" y="38" class="t">En Çok Kullanılan Diller · Languages</text>
-<clipPath id="c"><rect x="24" y="58" width="812" height="12" rx="6"/></clipPath>
-<g clip-path="url(#c)"><rect x="24.0" y="58" width="568.0" height="12" fill="#00ADD8"/><rect x="592.0" y="58" width="244.0" height="12" fill="#e38c00"/></g>
-<circle cx="30.0" cy="99" r="6" fill="#00ADD8"/><text x="42.0" y="104" class="m">Go <tspan class="y">69.9%</tspan></text><circle cx="233.0" cy="99" r="6" fill="#e38c00"/><text x="245.0" y="104" class="m">TSQL <tspan class="y">30.1%</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="102" viewBox="0 0 860 102">
+<style>.t{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.m{font:600 15px 'Segoe UI',Ubuntu,sans-serif;fill:#ffffff}.y{font-weight:400;fill:#9fb3bd}</style>
+<rect width="860" height="102" rx="8" fill="#0f2027"/>
+<text x="24" y="34" class="t">En Çok Kullanılan Diller · Languages</text>
+<clipPath id="c"><rect x="24" y="48" width="812" height="10" rx="5"/></clipPath>
+<g clip-path="url(#c)"><rect x="24.0" y="48" width="568.0" height="10" fill="#00ADD8"/><rect x="592.0" y="48" width="244.0" height="10" fill="#e38c00"/></g>
+<circle cx="30.0" cy="81" r="6" fill="#00ADD8"/><text x="42.0" y="86" class="m">Go <tspan class="y">69.9%</tspan></text><circle cx="233.0" cy="81" r="6" fill="#e38c00"/><text x="245.0" y="86" class="m">TSQL <tspan class="y">30.1%</tspan></text>
 </svg>
