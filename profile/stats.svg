@@ -1,7 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="165" viewBox="0 0 420 165">
-<style>.t{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.m{font:600 14px 'Segoe UI',Ubuntu,sans-serif;fill:#ffffff}.d{font:700 15px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}</style>
-<rect width="420" height="165" rx="6" fill="#0f2027"/>
-<text x="25" y="38" class="t">GitHub İstatistikleri · Stats</text>
-<text x="25" y="80" class="m">Toplam Yıldız · Stars:</text><text x="300" y="80" class="d" text-anchor="end">112</text><text x="25" y="106" class="m">Commit (son 1 yıl):</text><text x="300" y="106" class="d" text-anchor="end">31</text><text x="25" y="132" class="m">Issue:</text><text x="300" y="132" class="d" text-anchor="end">3</text>
-<text x="365" y="112" text-anchor="middle" font-size="40">⭐</text>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="200" viewBox="0 0 420 200">
+<style>.t{font:600 18px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.d{font:800 34px 'Segoe UI',Ubuntu,sans-serif;fill:#2C9AB7}.m{font:600 13px 'Segoe UI',Ubuntu,sans-serif;fill:#ffffff}.s{font:400 10.5px 'Segoe UI',Ubuntu,sans-serif;fill:#9fb3bd}.k{opacity:0;animation:g .6s ease-out forwards}@keyframes g{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}</style>
+<rect width="420" height="200" rx="6" fill="#0f2027"/>
+<text x="20" y="36" class="t">GitHub İstatistikleri · Stats</text>
+<g class="k" style="animation-delay:0ms">
+<rect x="20" y="56" width="120" height="124" rx="10" fill="#16313b" stroke="#2C9AB7" stroke-opacity="0.35"/>
+<text x="80" y="84" text-anchor="middle" font-size="20">⭐</text>
+<text x="80" y="126" text-anchor="middle" class="d">112</text>
+<text x="80" y="150" text-anchor="middle" class="m">Stars</text>
+<text x="80" y="167" text-anchor="middle" class="s">(Toplam Yıldız)</text>
+</g><g class="k" style="animation-delay:150ms">
+<rect x="150" y="56" width="120" height="124" rx="10" fill="#16313b" stroke="#2C9AB7" stroke-opacity="0.35"/>
+<text x="210" y="84" text-anchor="middle" font-size="20">📝</text>
+<text x="210" y="126" text-anchor="middle" class="d">33</text>
+<text x="210" y="150" text-anchor="middle" class="m">Commits</text>
+<text x="210" y="167" text-anchor="middle" class="s">(Kod Kaydı · son 1 yıl)</text>
+</g><g class="k" style="animation-delay:300ms">
+<rect x="280" y="56" width="120" height="124" rx="10" fill="#16313b" stroke="#2C9AB7" stroke-opacity="0.35"/>
+<text x="340" y="84" text-anchor="middle" font-size="20">🐞</text>
+<text x="340" y="126" text-anchor="middle" class="d">3</text>
+<text x="340" y="150" text-anchor="middle" class="m">Issues</text>
+<text x="340" y="167" text-anchor="middle" class="s">(Sorun Bildirimi)</text>
+</g>
 </svg>
