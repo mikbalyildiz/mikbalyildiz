@@ -5,19 +5,19 @@
 <g class="k" style="animation-delay:0ms">
 <rect x="24.0" y="50" width="261.3" height="64" rx="10" fill="#16313b" stroke="#2C9AB7" stroke-opacity="0.35"/>
 <text x="42.0" y="91" font-size="20">🔥</text>
-<text x="76.0" y="96" class="d">7</text>
+<text x="76.0" y="96" class="d">8</text>
 <text x="269.3" y="78" text-anchor="end" class="m">Current</text>
 <text x="269.3" y="97" text-anchor="end" class="s">(Güncel Seri · gün)</text>
 </g><g class="k" style="animation-delay:150ms">
 <rect x="299.3" y="50" width="261.3" height="64" rx="10" fill="#16313b" stroke="#2C9AB7" stroke-opacity="0.35"/>
 <text x="317.3" y="91" font-size="20">🏆</text>
-<text x="351.3" y="96" class="d">7</text>
+<text x="351.3" y="96" class="d">8</text>
 <text x="544.7" y="78" text-anchor="end" class="m">Longest</text>
 <text x="544.7" y="97" text-anchor="end" class="s">(En Uzun Seri · gün)</text>
 </g><g class="k" style="animation-delay:300ms">
 <rect x="574.7" y="50" width="261.3" height="64" rx="10" fill="#16313b" stroke="#2C9AB7" stroke-opacity="0.35"/>
 <text x="592.7" y="91" font-size="20">📅</text>
-<text x="626.7" y="96" class="d">44</text>
+<text x="626.7" y="96" class="d">45</text>
 <text x="820.0" y="78" text-anchor="end" class="m">Contributions</text>
 <text x="820.0" y="97" text-anchor="end" class="s">(Son 1 Yıl Katkı)</text>
 </g>
